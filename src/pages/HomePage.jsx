@@ -13,15 +13,15 @@ const HomePage = () => {
       />
       <Container className={classes.container} size="md">
         <Title className={classes.title}>
-          All information about your football league
+          Wszystkie informacje o twoich ulubionych ligach
         </Title>
         <Text className={classes.description} size="xl" mt="xl">
-          Soccer Vault is a web app that stores all information about your favourite football league.
-          Schedules, results, tables, stats and more. 
+          Soccer Vault to aplikacja internetowa składująca wszystkie informacje o twoich ulubionych ligach piłkarskich.
+          Terminarze, wyniki, tabele, statystyki i więcej. 
         </Text>
         <Link to="/leagues">
             <Button variant="gradient" size="xl" radius="xl" className={classes.control}>
-                Search for league
+                Wyszukaj ligę
             </Button>
         </Link>          
       </Container>

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Link} from 'react-router-dom';
 import { ClerkProvider } from '@clerk/clerk-react'
+import { plPL } from '@clerk/localizations'
 import { MantineProvider, AppShell, Burger, Group, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { DatesProvider } from '@mantine/dates';
@@ -23,7 +24,7 @@ function App() {
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
 
   return (
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/" localization={plPL}>
       <MantineProvider>
         <DatesProvider settings={{ timezone: 'UTC' }}>
           <Router>

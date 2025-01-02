@@ -32,7 +32,7 @@ const LeagueAdminPage = () => {
     }
 
     if (!data) {
-      return <div>Loading...</div>
+      return <div>Ładowanie...</div>
     }
     return (
         <ScrollArea h={800}>
@@ -51,7 +51,7 @@ const LeagueAdminPage = () => {
                 gradient={{ from: 'red', to: 'pink', deg: 90 }}
                 onClick={removeLeague} 
                 size='md'> 
-                    Delate League 
+                    Usuń ligę
                 </Button> 
               </Center>
             </Container>

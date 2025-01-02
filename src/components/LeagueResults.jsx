@@ -26,7 +26,7 @@ export function LeagueResults() {
         else return (
             <Container mx="auto" key={round.id}>
                 <Group justify="center" mb={20}>
-                    <Title> Round {results.length - index}</Title>
+                    <Title> Kolejka {results.length - index}</Title>
                 </Group>                
                     <Flex
                     gap="xl"

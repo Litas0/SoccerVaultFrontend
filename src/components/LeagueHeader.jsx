@@ -4,9 +4,9 @@ import { Button, Group } from '@mantine/core';
 import classes from '../modules/LeagueHeader.module.css';
 
 const data = [
-  { link: 'table', label: 'Table'},
-  { link: 'results', label: 'Results'},
-  { link: 'fixtures', label: 'Fixtures'}
+  { link: 'table', label: 'Tabela'},
+  { link: 'results', label: 'Wyniki'},
+  { link: 'fixtures', label: 'Terminarz'}
 ];
 
 export function LeagueHeader() {

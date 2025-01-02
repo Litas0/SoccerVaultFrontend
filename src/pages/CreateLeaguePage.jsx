@@ -26,18 +26,18 @@ const CreateLeaguePage = () => {
             return {
               name:
                 values.name.trim().length > 20 || values.name.trim().length < 4
-                  ? 'Lague name cant be shorter than 4 or longer than 20 characters'
+                  ? 'Nazwa ligi nie może być krótsza niż 4, ani dłuższa niż 20 znaków' 
                   : null,
               description:
                 values.description.length > 300
-                    ? 'Description cant be longer than 300 characters'
+                    ? 'Opis ligi nie może być dłuższy niż 300 znaków'
                     : null,
             };
           }
     
           if (active === 1) {
             return {
-              numberOfTeams: Math.floor(values.numberOfTeams) < 4 || Math.floor(values.numberOfTeams) > 25 ? 'League must have between 4 and 25 teams' : null,
+              numberOfTeams: Math.floor(values.numberOfTeams) < 4 || Math.floor(values.numberOfTeams) > 25 ? 'Liga musi mieć między 4, a 25 zespołów' : null,
             };
           }
     
@@ -66,26 +66,26 @@ const CreateLeaguePage = () => {
       return (
         <Container size='lg' >
           <Stepper active={active}>
-            <Stepper.Step label="First step" description="League informations">
+            <Stepper.Step label="Pierwszy krok" description="Informacje o lidze">
                 <TextInput
-                    label="League name"
-                    placeholder="League Name"
+                    label="Nazwa ligi"
+                    placeholder="Nazwa ligi"
                     key={form.key('name')}
                     {...form.getInputProps('name')}
                 />
                 <TextInput
-                    label="League description"
-                    placeholder="Description"
+                    label="Opis ligi"
+                    placeholder="Opis ligi"
                     key={form.key('description')}
                     {...form.getInputProps('description')}
                 />
             </Stepper.Step>
     
-            <Stepper.Step label="Second step" description="League configuration">
+            <Stepper.Step label="Drugi krok" description="Konfiguracja ligi">
               <TextInput
                 type="number"
-                label="Number of teams"
-                placeholder="Number of teams"
+                label="Rozmiar ligi"
+                placeholder="Rozmiar ligi"
                 key={form.key('numberOfTeams')}
                 {...form.getInputProps('numberOfTeams')}
               />
@@ -93,19 +93,19 @@ const CreateLeaguePage = () => {
             </Stepper.Step>
 
             <Stepper.Completed>
-              Creation Completed!
+              Liga utworzona!
             </Stepper.Completed>
           </Stepper>
     
           <Group justify="flex-end" mt="xl">
             {active === 1 && (
               <Button variant="default" onClick={prevStep}>
-                Back
+                Cofnij
               </Button>
             )}
-            {active === 0 && <Button onClick={nextStep}>Next step</Button>}
-            {active === 1 && <Button onClick={nextStep}>Create League</Button>}
-            {active === 2 && <Button onClick={goToYourLeagues}>See your leagues</Button>}
+            {active === 0 && <Button onClick={nextStep}>Następny krok</Button>}
+            {active === 1 && <Button onClick={nextStep}>Utwórz lige</Button>}
+            {active === 2 && <Button onClick={goToYourLeagues}>Przeglądaj swoje ligi</Button>}
           </Group>
         </Container>
       );

@@ -7,7 +7,7 @@ const YourLeaguesListPage = () => {
             <Title order={1} c="blue" style={{ textAlign: 'center',
              marginBottom: '40px'
              }}> 
-                Manage your Leagues
+                Twoje ligi
             </Title>
             <AdminLeagueList />
         </>        

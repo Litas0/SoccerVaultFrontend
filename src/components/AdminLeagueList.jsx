@@ -32,7 +32,7 @@ export function AdminLeagueList() {
         <Table.Td>{row.numberOfTeams}</Table.Td>
         <Table.Td>{row.teamsAdded}</Table.Td>
         <Table.Td style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Checkbox icon={IconCheck} color="lime.8" checked={row.leagueStarted} readOnly={true}/></Table.Td>
-        <Table.Td><Link to={link}>  <Button size="sm"> Manage League </Button> </Link>  </Table.Td>
+        <Table.Td><Link to={link}>  <Button size="sm"> Zarządzaj ligą </Button> </Link>  </Table.Td>
       </Table.Tr>
     )
 })
@@ -45,16 +45,16 @@ export function AdminLeagueList() {
         <Table.Tbody>
           <Table.Tr>
             <Table.Th style={{ textAlign: 'center' }}>
-              League name
+              Nazwa ligi
             </Table.Th>
             <Table.Th style={{ textAlign: 'center' }}>
-              Size of a league
+              Rozmiar ligi
             </Table.Th>
             <Table.Th style={{ textAlign: 'center' }}>
-              Teams added 
+              Dodane drużyny 
             </Table.Th>
             <Table.Th style={{ textAlign: 'center' }}>
-              Calendar generated
+              Kalendarz wygenerowany
             </Table.Th>
             <Table.Th>
             </Table.Th>
@@ -67,7 +67,7 @@ export function AdminLeagueList() {
             <Table.Tr>
               <Table.Td colSpan={4}>
                 <Text fw={500} ta="center">
-                  You have not created any leagues
+                  Nie utworzono żadnych lig
                 </Text>
               </Table.Td>
             </Table.Tr>

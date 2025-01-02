@@ -26,8 +26,8 @@ export function AdminTeamsList({ data, leagueId, setData }) {
       <Table.Tr key={team.name}>
         <Table.Td>{team.name}</Table.Td>
         <Table.Td>{team.players.length}</Table.Td>
-        <Table.Td><Link to={link}>  <Button size="sm" variant="filled"> Manage Team </Button> </Link> </Table.Td>
-        <Table.Td><Button size="sm" variant="gradient" gradient={{ from: 'red', to: 'pink', deg: 90 }} onClick={() => removeTeam(team.id)}> Remove Team </Button> </Table.Td>
+        <Table.Td><Link to={link}>  <Button size="sm" variant="filled"> Zarządzaj drużyną </Button> </Link> </Table.Td>
+        <Table.Td><Button size="sm" variant="gradient" gradient={{ from: 'red', to: 'pink', deg: 90 }} onClick={() => removeTeam(team.id)}> Usuń drużynę </Button> </Table.Td>
       </Table.Tr>
     )
 })
@@ -41,13 +41,13 @@ export function AdminTeamsList({ data, leagueId, setData }) {
           <Table.Tbody>
             <Table.Tr>
               <Table.Th style={{ textAlign: 'center' }}>
-                Team name
+                Nazwa drużyny
               </Table.Th>
               <Table.Th style={{ textAlign: 'center' }}>
-                Number of players
+                Liczba zawodników
               </Table.Th>
               <Table.Th style={{ textAlign: 'center' }}>
-              Link to
+                Link do drużyny
               </Table.Th>
               <Table.Th style={{ textAlign: 'center' }}>
               </Table.Th>
@@ -61,7 +61,7 @@ export function AdminTeamsList({ data, leagueId, setData }) {
             <Table.Tr>
               <Table.Td colSpan={4}>
                 <Text fw={500} ta="center">
-                  No teams added to league
+                  Nie dodano żadnych drużyn
                 </Text>
               </Table.Td>
             </Table.Tr>
@@ -71,7 +71,7 @@ export function AdminTeamsList({ data, leagueId, setData }) {
               <Table.Td colSpan={4}>
                 <Link to={addTeamLink}>
                   <Button size="md"> 
-                    Add team to league
+                    Dodaj drużyne do ligi
                   </Button>
                 </Link>
               </Table.Td>

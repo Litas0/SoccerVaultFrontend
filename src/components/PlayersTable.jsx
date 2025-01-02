@@ -7,6 +7,10 @@ const positionColors = {
   Defender: 'yellow',
   Midfielder: 'blue',
   Striker: 'red',
+  Bramkarz: 'green',
+  Obrońca: 'yellow',
+  Pomocnik: 'blue',
+  Napastnik: 'red'
 };
 
 export function PlayersTable({ form }) {
@@ -15,7 +19,7 @@ export function PlayersTable({ form }) {
 
     const [nameState, setNameState] = useState('');
     const [surnameState, setSurnameState] = useState('');
-    const [positionState, setPositionState] = useState('Goalkeeper');
+    const [positionState, setPositionState] = useState('Bramkarz');
     const [numberState, setNumberState] = useState(0);
 
 
@@ -30,7 +34,7 @@ export function PlayersTable({ form }) {
         form.setFieldValue('players', [...playersState, player]);
         setNameState('');
         setSurnameState('');
-        setPositionState('Goalkeeper');
+        setPositionState('Bramkarz');
         setNumberState(0);
     }
   
@@ -70,28 +74,28 @@ export function PlayersTable({ form }) {
     </Table.Tr>
   ));
 
-  if (!playersState) return ( <div> Loading... </div>)
+  if (!playersState) return ( <div> Ładowanie... </div>)
 
   return (
     <Table.ScrollContainer h={600}>
       <Table verticalSpacing="sm" stickyHeader='true'>
         <Table.Thead>
           <Table.Tr>
-            <Table.Th>Name</Table.Th>
-            <Table.Th>Surname</Table.Th>
-            <Table.Th>Position</Table.Th>
-            <Table.Th>Number</Table.Th>
-            <Table.Th />
+            <Table.Th>Imie</Table.Th>
+            <Table.Th>Nazwisko</Table.Th>
+            <Table.Th>Pozycja</Table.Th>
+            <Table.Th>Numer</Table.Th>
+            <Table.Th/>
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>
             {rows}
             <Table.Tr key={playersState}>
-                <Table.Th><TextInput placeholder="Name" onChange={(event) => setNameState(event.currentTarget.value)}/></Table.Th>
-                <Table.Th><TextInput placeholder="Surname" onChange={(event) => setSurnameState(event.currentTarget.value)}/></Table.Th>
-                <Table.Th><NativeSelect data={['Goalkeeper', 'Defender', 'Midfielder', 'Striker']} onChange={(event) => setPositionState(event.currentTarget.value)}/></Table.Th>
-                <Table.Th><TextInput placeholder="Number" type="number" onChange={(event) => setNumberState(event.currentTarget.value)}/></Table.Th>
-                <Table.Th><Button variant="filled" onClick={addPlayer}>Add player</Button></Table.Th>
+                <Table.Th><TextInput placeholder="Imie" onChange={(event) => setNameState(event.currentTarget.value)}/></Table.Th>
+                <Table.Th><TextInput placeholder="Nazwisko" onChange={(event) => setSurnameState(event.currentTarget.value)}/></Table.Th>
+                <Table.Th><NativeSelect data={['Bramkarz', 'Obrońca', 'Pomocnik', 'Napastnik']} onChange={(event) => setPositionState(event.currentTarget.value)}/></Table.Th>
+                <Table.Th><TextInput placeholder="Numer" type="number" onChange={(event) => setNumberState(event.currentTarget.value)}/></Table.Th>
+                <Table.Th><Button variant="filled" onClick={addPlayer}>Dodaj zawodnika</Button></Table.Th>
             </Table.Tr> 
         </Table.Tbody>
       </Table>

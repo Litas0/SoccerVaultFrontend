@@ -49,7 +49,7 @@ export function LeagueSearch() {
         <Table.Td>{row.name}</Table.Td>
         <Table.Td>{row.numberOfTeams}</Table.Td>
         <Table.Td>{row.owner}</Table.Td>
-        <Table.Td> <Link to={link}>  <Button size="sm"> Link to the league </Button> </Link> </Table.Td>
+        <Table.Td> <Link to={link}>  <Button size="sm"> Link do ligi </Button> </Link> </Table.Td>
       </Table.Tr>
     )
   })
@@ -60,7 +60,7 @@ export function LeagueSearch() {
     <ScrollArea>
       <Container size='xs'>
         <TextInput
-          placeholder="Search by any field"
+          placeholder="Wyszukaj lige"
           mb="md"
           leftSection={<IconSearch size={16} stroke={1.5} />}
           value={search}
@@ -71,13 +71,13 @@ export function LeagueSearch() {
         <Table.Thead>
           <Table.Tr>
             <Table.Th>
-              League name
+              Nazwa ligi
             </Table.Th>
             <Table.Th>
-              Number of teams playing
+              Rozmiar ligi
             </Table.Th>
             <Table.Th>
-              League manager
+              Zarządca ligi
             </Table.Th>
             <Table.Th>
             </Table.Th>
@@ -90,7 +90,7 @@ export function LeagueSearch() {
             <Table.Tr>
               <Table.Td colSpan={3}>
                 <Text fw={500} ta="center">
-                  Nothing found, fix search criteria
+                  Żadna liga nie została znaleziona
                 </Text>
               </Table.Td>
             </Table.Tr>

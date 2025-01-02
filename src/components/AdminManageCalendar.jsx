@@ -21,7 +21,7 @@ export function AdminManageCalendar({ calendar }) {
         <Container mx="auto" key={round.id}>
             <Group justify="center" mb={5}>
                 <Button variant="transparent" color="black" size="xl" onClick={() => updateOpened(round.number - 1)}
-                    rightSection={!opened[round.number - 1] ? <IconCaretDownFilled /> : <IconCaretUpFilled />}> Round {round.number}</Button>
+                    rightSection={!opened[round.number - 1] ? <IconCaretDownFilled /> : <IconCaretUpFilled />}> Kolejka {round.number}</Button>
             </Group>
             <Collapse in={opened[round.number - 1]}>
                 <Flex

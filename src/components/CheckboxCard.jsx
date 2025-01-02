@@ -25,10 +25,10 @@ function CheckboxCard({form}) {
 
       <div>
         <Text fw={500} mb={7} lh={1}>
-          Rematch round
+          Rewanże
         </Text>
         <Text fz="sm" c="dimmed">
-          Choose if rematches should be played 
+          Wybierz czy rewanże mają być rozgrywane
         </Text>
       </div>
     </UnstyledButton>

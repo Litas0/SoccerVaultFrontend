@@ -18,22 +18,22 @@ function NavBar() {
       <div className={classes.navbarMain}>
         <Link
           className={classes.link} data-active={'/leagues' === active || undefined}
-          to={'/leagues'} key={'Search for league'}>
+          to={'/leagues'} key={'Wyszukaj lige'}>
           <IconSearch className={classes.linkIcon} stroke={2} />
-          <span>{'Search for league'}</span>
+          <span>{'Wyszukaj lige'}</span>
         </Link>
         <SignedIn> 
           <Link
           className={classes.link} data-active={'/create' === active || undefined}
-          to={'/create'} key={'Create League'}>
+          to={'/create'} key={'Utwórz lige'}>
             <IconSquarePlus2 className={classes.linkIcon} stroke={2} />
-            <span>{'Create League'}</span>
+            <span>{'Utwórz lige'}</span>
           </Link>
           <Link
           className={classes.link} data-active={'/your_leagues' === active || undefined}
-          to={'/your_leagues'} key={'Your Leagues'}>
+          to={'/your_leagues'} key={'Twoje ligi'}>
             <IconList className={classes.linkIcon} stroke={2} />
-            <span>{'Your Leagues'}</span>
+            <span>{'Twoje ligi'}</span>
           </Link>
         </SignedIn>       
       </div>
@@ -42,7 +42,7 @@ function NavBar() {
           <SignedOut>
             <SignInButton> 
               <Button variant="filled" 
-              size="md" rightSection={<IconLogin size={14} />}>Log In</Button>
+              size="md" rightSection={<IconLogin size={14} />}>Zaloguj się</Button>
             </SignInButton>
           </SignedOut>
           <SignedIn>

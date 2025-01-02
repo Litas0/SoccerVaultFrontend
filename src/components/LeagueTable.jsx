@@ -87,34 +87,34 @@ export function LeagueTable() {
     <Table.Tbody>
         <Table.Tr>
             <Table.Th>
-                Position
+                Pozycja
             </Table.Th>
             <Table.Th>
-                Team
+                Drużyna
             </Table.Th>
             <Table.Th>
-                Played
+                Rozegrane mecze
             </Table.Th>
             <Table.Th>
-                Won
+                Zwycięstwa
             </Table.Th>
             <Table.Th>
-                Drawn
+                Remisy
             </Table.Th>
             <Table.Th>
-                Lost
+                Porażki
             </Table.Th>
             <Table.Th>
-                G+
+                Gole zdobyte
             </Table.Th>
             <Table.Th>
-                G-
+                Gole stracone
             </Table.Th>
             <Table.Th>
-                G diff
+                Różnica goli
             </Table.Th>
             <Table.Th>
-                Points
+                Punkty
             </Table.Th>
         </Table.Tr>
     </Table.Tbody>
@@ -125,7 +125,7 @@ export function LeagueTable() {
         <Table.Tr>
             <Table.Td colSpan={10}>
               <Text fw={500} ta="center">
-                Nothing found, fix search criteria
+                Liga pusta
               </Text>
             </Table.Td>
         </Table.Tr>

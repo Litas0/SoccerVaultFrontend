@@ -28,7 +28,7 @@ export function Match( { m, roundId }) {
         close()
     }
 
-    if (!match) return (<div> Loading </div>)
+    if (!match) return (<div> Ładowanie... </div>)
 
     const modal = (
         <>
@@ -45,7 +45,7 @@ export function Match( { m, roundId }) {
                     <Text size="lg">{match.awayTeamName}</Text>                  
                 </Grid.Col>
                 <Grid.Col span={5}>
-                    <Input placeholder="Home goals" type='number' onChange={(event) => setHomeScore(event.currentTarget.value)}/> 
+                    <Input placeholder="Bramki drużyny 1" type='number' onChange={(event) => setHomeScore(event.currentTarget.value)}/> 
                 </Grid.Col>
                 <Grid.Col span={2}> 
                     <Center>
@@ -53,11 +53,11 @@ export function Match( { m, roundId }) {
                     </Center>                   
                 </Grid.Col>
                 <Grid.Col span={5}>
-                    <Input placeholder="Away goals" type='number' onChange={(event) => setAwayScore(event.currentTarget.value)}/> 
+                    <Input placeholder="Bramki drużyny 2" type='number' onChange={(event) => setAwayScore(event.currentTarget.value)}/> 
                 </Grid.Col>
                 <Grid.Col span={12}>
                     <Center>
-                        <Button variant="filled" color="indigo" onClick={() => addResult()}>Add Score</Button>
+                        <Button variant="filled" color="indigo" onClick={() => addResult()}>Dodaj wynik</Button>
                     </Center>  
                 </Grid.Col>
             </Grid>
@@ -76,15 +76,15 @@ export function Match( { m, roundId }) {
         valueFormat="YYYY MM DD"
         value={date}
         onChange={setDate}
-        label="Match Date"
-        placeholder="Match date"/>}
+        label="Data meczu"
+        placeholder="Data meczu"/>}
     {date &&
         <Button 
         size="sm" 
         color="green" 
         variant="filled" 
         onClick={() => addDate()}>
-        Set match date
+            Ustal date meczu
         </Button>}
     {match.date && !match.played &&
         <Title order={5}>{match.date.slice(0,10)} {match.date.slice(11,16)}</Title>}
@@ -98,7 +98,7 @@ export function Match( { m, roundId }) {
             color="yellow" 
             variant="filled"
             onClick={open}>
-            Add result</Button>
+            Dodaj wynik</Button>
         </>}
     {match.date && match.played && 
     <Title order={3}>{match.score.home} : {match.score.away}</Title>}

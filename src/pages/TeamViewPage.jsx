@@ -33,6 +33,10 @@ const TeamViewPage = () => {
         Defender: 'yellow',
         Midfielder: 'blue',
         Striker: 'red',
+        Bramkarz: 'green',
+        Obrońca: 'yellow',
+        Pomocnik: 'blue',
+        Napastnik: 'red',
       };
 
     const rows = team ? team.players.map((player) => (
@@ -58,7 +62,7 @@ const TeamViewPage = () => {
         </Table.Tr>
       )) : null
 
-    if (!team || !leagueName) return (<div> Loading... </div>) 
+    if (!team || !leagueName) return (<div> Ładowanie... </div>) 
 
     return (
       <Grid>
@@ -76,23 +80,23 @@ const TeamViewPage = () => {
             wrap="wrap"
           >
             <Group>
-              <Title order={4}> League: </Title>
+              <Title order={4}> Liga: </Title>
               <Text size="md" ml={10}> {leagueName} </Text>
             </Group>
             <Group>
-              <Title order={4}> Description: </Title>
+              <Title order={4}> Opis: </Title>
               <Text size="md" ml={10}> {team.description} </Text>
             </Group>
           </Flex>
         </Grid.Col>
         <Grid.Col span={6}>       
           <Center>
-            <Button onClick={backToLeagueTable}>Back to League Table</Button>
+            <Button onClick={backToLeagueTable}>Wróć do tabeli ligi</Button>
           </Center>  
         </Grid.Col>
         <Grid.Col span={12}>
           <Center>
-            <Title order={3}>Players</Title>
+            <Title order={3}>Zawodnicy</Title>
           </Center>         
         </Grid.Col>
         <Grid.Col span={2}>
@@ -102,10 +106,10 @@ const TeamViewPage = () => {
               <Table verticalSpacing="sm" stickyHeader='true'>
                   <Table.Thead>
                   <Table.Tr>
-                      <Table.Th>Name</Table.Th>
-                      <Table.Th>Surname</Table.Th>
-                      <Table.Th>Position</Table.Th>
-                      <Table.Th>Number</Table.Th>
+                      <Table.Th>Imie</Table.Th>
+                      <Table.Th>Nazwisko</Table.Th>
+                      <Table.Th>Pozycja</Table.Th>
+                      <Table.Th>Numer</Table.Th>
                   </Table.Tr>
                   </Table.Thead>
                   <Table.Tbody>

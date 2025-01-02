@@ -27,15 +27,15 @@ const ManageTeamPage = () => {
             return {
                 name:
                 values.name.trim().length > 20 || values.name.trim().length < 4
-                    ? 'Team name cant be shorter than 4 or longer than 20 characters'
+                    ? 'Nazwa drużyny nie może byc krótsza niż 4 i dłuższa niż 20 znaków'
                     : null,
                 description:
                 values.description.length > 300
-                    ? 'Description cant be longer than 300 characters'
+                    ? 'Opis drużyny nie może być dłuższy niż 300 znaków'
                     : null,
                 stadionAdress:
                 values.stadionAdress.trim().length > 100
-                    ? 'Stadion adress cant be longer than 100 characters'
+                    ? 'Adres stadionu nie może być dłuższy niż 100 znaków'
                     : null,
             };
           }
@@ -44,7 +44,7 @@ const ManageTeamPage = () => {
             return {
                 players: 
                 values.players.length < 11
-                    ? 'Team must have at least 11 players'
+                    ? 'Drużyna nie może mieć mniej niż 11 zawodników'
                     : null,
             };
           }  
@@ -94,49 +94,49 @@ const ManageTeamPage = () => {
     <ScrollArea>
         <Container size='lg' >
             <Stepper active={active}>
-            <Stepper.Step label="First step" description="Manage team informations">
+            <Stepper.Step label="Pierwszy krok" description="Informacje o drużynie">
                 <TextInput
-                    label="Team name"
-                    placeholder="Team Name"
+                    label="Nazwa drużyny"
+                    placeholder="Nazwa drużyny"
                     defaultValue={form.getValues().name}
                     key={form.key('name')}
                     {...form.getInputProps('name')}
                 />
                 <TextInput
-                    label="Team description"
-                    placeholder="Description"
+                    label="Opis drużyny"
+                    placeholder="Opis drużyny"
                     defaultValue={form.getValues().description}
                     key={form.key('description')}
                     {...form.getInputProps('description')}
                 />
                 <TextInput
-                    label="Stadion address"
-                    placeholder="Stadion address"
+                    label="Adres stadionu"
+                    placeholder="Adres stadionu"
                     defaultValue={form.getValues().stadionAdress}
                     key={form.key('stadionAdress')}
                     {...form.getInputProps('stadionAdress')}
                 />
             </Stepper.Step>
 
-            <Stepper.Step label="Second step" description="Manage players in the team">           
+            <Stepper.Step label="Drugi krok" description="Zawodnicy drużyny">           
                     <PlayersTable form={form}/>
             </Stepper.Step>
 
             <Stepper.Completed>
-                Team update completed!
+                Aktualizacja drużyny zakończona!
             </Stepper.Completed>
             </Stepper>
 
             <Group justify="flex-end" mt="xl">
             {active === 1 && (
                 <Button variant="default" onClick={prevStep}>
-                Back
+                    Cofnij
                 </Button>
             )}
-            {active === 0 && <Button onClick={nextStep}>Next step</Button>}
-            {active === 1 && form.getValues().players.length < 11 && <Button disabled>You need at least 11 players</Button>}
-            {active === 1 && form.getValues().players.length >= 11 && <Button onClick={nextStep}>Update Team</Button>}
-            {active === 2 && <Button onClick={goToYourLeague}>Back to league managment</Button>}
+            {active === 0 && <Button onClick={nextStep}>Następny krok</Button>}
+            {active === 1 && form.getValues().players.length < 11 && <Button disabled>Wymagane jest 11 zawodników</Button>}
+            {active === 1 && form.getValues().players.length >= 11 && <Button onClick={nextStep}>Aktualizuj drużyne</Button>}
+            {active === 2 && <Button onClick={goToYourLeague}>Wróć do zarządzania ligą</Button>}
             </Group>
         </Container>
     </ScrollArea>

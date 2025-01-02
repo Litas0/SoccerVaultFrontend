@@ -18,7 +18,7 @@ export function AdminCreateCalendar({ leagueId, setData }) {
         rightSection={<IconArrowRight size={14} />}
         size="md"
         onClick={generateCalendar}
-        >  Generate calendar for league </Button>
+        >  Wygeneruj kalendarz dla ligi </Button>
     </Center>
     )
 }

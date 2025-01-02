@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.18.1",
+    "@clerk/localizations": "^3.9.5",
     "@mantine/core": "^7.14.3",
     "@mantine/dates": "^7.14.3",
     "@mantine/dropzone": "^7.14.3",
