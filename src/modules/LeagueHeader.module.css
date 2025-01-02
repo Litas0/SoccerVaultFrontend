@@ -1,0 +1,11 @@
+.link {
+    &[data-active] {
+    &,
+      &:hover {
+        background: linear-gradient(45deg,#577bd1 10%,#3358a3 90%);
+        color: var(--mantine-color-white);
+        border-width: 0;
+      }
+    }
+}
+
