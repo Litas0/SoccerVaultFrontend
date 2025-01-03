@@ -32,7 +32,7 @@ export function AdminLeagueList() {
         <Table.Td>{row.numberOfTeams}</Table.Td>
         <Table.Td>{row.teamsAdded}</Table.Td>
         <Table.Td style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Checkbox icon={IconCheck} color="lime.8" checked={row.leagueStarted} readOnly={true}/></Table.Td>
-        <Table.Td><Link to={link}>  <Button size="sm"> Zarządzaj ligą </Button> </Link>  </Table.Td>
+        <Table.Td><Link to={link}>  <Button size="sm"> Zarządzaj </Button> </Link>  </Table.Td>
       </Table.Tr>
     )
 })

@@ -49,7 +49,7 @@ export function LeagueSearch() {
         <Table.Td>{row.name}</Table.Td>
         <Table.Td>{row.numberOfTeams}</Table.Td>
         <Table.Td>{row.owner}</Table.Td>
-        <Table.Td> <Link to={link}>  <Button size="sm"> Link do ligi </Button> </Link> </Table.Td>
+        <Table.Td> <Link to={link}>  <Button size="sm"> Przeglądaj </Button> </Link> </Table.Td>
       </Table.Tr>
     )
   })

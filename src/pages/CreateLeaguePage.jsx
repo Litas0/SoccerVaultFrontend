@@ -104,7 +104,7 @@ const CreateLeaguePage = () => {
               </Button>
             )}
             {active === 0 && <Button onClick={nextStep}>Następny krok</Button>}
-            {active === 1 && <Button onClick={nextStep}>Utwórz lige</Button>}
+            {active === 1 && <Button onClick={nextStep}>Utwórz ligę</Button>}
             {active === 2 && <Button onClick={goToYourLeagues}>Przeglądaj swoje ligi</Button>}
           </Group>
         </Container>

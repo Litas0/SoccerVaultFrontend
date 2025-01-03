@@ -20,14 +20,14 @@ function NavBar() {
           className={classes.link} data-active={'/leagues' === active || undefined}
           to={'/leagues'} key={'Wyszukaj lige'}>
           <IconSearch className={classes.linkIcon} stroke={2} />
-          <span>{'Wyszukaj lige'}</span>
+          <span>{'Wyszukaj ligę'}</span>
         </Link>
         <SignedIn> 
           <Link
           className={classes.link} data-active={'/create' === active || undefined}
           to={'/create'} key={'Utwórz lige'}>
             <IconSquarePlus2 className={classes.linkIcon} stroke={2} />
-            <span>{'Utwórz lige'}</span>
+            <span>{'Utwórz ligę'}</span>
           </Link>
           <Link
           className={classes.link} data-active={'/your_leagues' === active || undefined}

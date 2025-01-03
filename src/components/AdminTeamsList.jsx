@@ -26,7 +26,7 @@ export function AdminTeamsList({ data, leagueId, setData }) {
       <Table.Tr key={team.name}>
         <Table.Td>{team.name}</Table.Td>
         <Table.Td>{team.players.length}</Table.Td>
-        <Table.Td><Link to={link}>  <Button size="sm" variant="filled"> Zarządzaj drużyną </Button> </Link> </Table.Td>
+        <Table.Td><Link to={link}>  <Button size="sm" variant="filled"> Edytuj </Button> </Link> </Table.Td>
         <Table.Td><Button size="sm" variant="gradient" gradient={{ from: 'red', to: 'pink', deg: 90 }} onClick={() => removeTeam(team.id)}> Usuń drużynę </Button> </Table.Td>
       </Table.Tr>
     )
